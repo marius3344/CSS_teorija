@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Intro</title>
 </head>
+<style>
+    h1 {
+
+        font-family: 'Courier New', Courier, monospace;
+        color: blue
+    }
+
+    .smallHeading {
+        font-family: 'Brush Script MT ', cursive;
+        color: red;
+        font-size: 45px
+    }
+</style>
+<link rel="stylesheet" href="dist/css/style.css">
+
 <body>
-    
+    <h3 class="smallHeading">Sintakse </h3>
+    <h1>CSS intro</h1>
+    <p class="left">selactor elementas</p>
+    <p class="center">deklaration </p>
+  
+    <p class="right">universalus</p>
+
+    <h3 class="smallHeading">Stiliaus rasymo budai </h3>
+    <ul>
+        <li style="border:2px solid black ; background-color:yellow;">CSS </li>
+        <li>Visos savybes rasomos Style elemente</li>
+        <li>CSS rasomas atskirame faile</li>
+    </ul>
+    <div class="box">
+        <h1 class="boxName">box</h1>
+    </div>
+    <div class="box2">
+
+    </div>
+
+    <ul>
+        <li>Absolute
+            <ul>
+                <li>px</li>
+                <li>cm</li>
+                <li>in</li>
+                <li>mm</li>
+                <li>pt</li>
+            </ul>
+        </li>
+        <li>
+            Relative
+            <ul>
+                <li>%</li>
+                <li>vw ir vh (wiewport width ir height) </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="parent">
+        Parent elementas
+        <div class="child">Child elementas</div>
+    </div>
+
+
 </body>
+
 </html>
