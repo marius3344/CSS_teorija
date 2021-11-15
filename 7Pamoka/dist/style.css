@@ -41,3 +41,32 @@ body {
     position: fixed;
     top: 0;
 }
+
+/* ----------------task hmtl-------------- */
+.menu {
+    width: 100%;
+    height: 100px;
+    background-color: lightsalmon;
+    position: relative;
+    z-index: 1;
+}
+.menuItems {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    /* border: 1px solid black; */
+    transform: translateY(-50%);
+}
+
+.menuItems ul li {
+    display: inline-block;
+    margin: 0 20px;
+    
+}
+.image {
+    position: fixed;
+    /* bottom: 0; */
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
