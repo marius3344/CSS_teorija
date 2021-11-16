@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.flexContainer {
+    height: 500px;
+    width: 500px;
+    background-color: orange;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    /* justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content:space-between */
+justify-content: space-evenly;
+/* align-items: flex-start;
+align-items: flex-end; */
+/* align-items: center; */
+/* align-items: stretch; */
+/* align-items: center; */
+/* align-items: stretch; */
+/* align-items: baseline; */
+/* align-content: flex-start; */
+/* align-content: flex-end; */
+/* align-content: center; */
+/* align-content: stretch; */
+/* align-content: space-between; */
+align-content: space-around;
+
+
+}
+.flexItem {
+    height: 80px;
+    width: 80px;
+    background-color: green;
+    text-align: center;
+    
+}
+.flexItem h3 {
+    margin: 0 auto;
+}
+/* record page */
+/* font-family: Bitter; */
+/* font-family: 'Roboto Condensed', sans-serif */
+
+.mainSection {
+    width: 100% ;
+    height: 100vh;
+    background-color: #F1EFF0;
+}
+.sectionWrapper {
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+.header {
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border: 45px solid black;
+    border-radius: 150px;
+    background-color: #fff569;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family:'Roboto Condensed', sans-serif ;
+
+}
+.title {
+    font-size: 50px;
+    font-family: 'Bitter' serif;
+    font-weight: 700;
+}
+.title h1 {
+    margin: 0;
+    padding: 0;
+
+}
+
+.textContainer {
+    width: 100%;
+    height: 25%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+} 
+.text {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+    font-family: 'Bitter', serif ;
+   
+
+
+}
+
+.left{
+    padding-left: 20px;
+   
+
+}
+.right {
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+.text p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+}
+
+.grphContainer {
+    width: 100%;
+    height: 55%;
+    border: 1px solid black;
+}
+
