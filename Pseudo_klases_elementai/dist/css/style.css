@@ -162,14 +162,14 @@ body {
 .imageBlock,
 .imageBlock .overlay,
 .imageBlock .image,
-.imageblock .greenLayer {
+.imageBlock .greenLayer {
     height: 100%;
     width: 100%;
 }
 
 .imageBlock .overlay,
 .imageBlock .image,
-.imageblock .greenLayer {
+.imageBlock .greenLayer {
     position: absolute;
     top: 0;
     left: 0;
@@ -180,15 +180,92 @@ body {
     background-color: black;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 3;
     opacity: 0;
+    transition: 0.5s ease-in-out;
 }
 
 .image {
     z-index: 2;
     overflow: hidden;
+    transition: 0.5s ease-in-out;
 }
 
+.imageBlock .image img {
+    height: 100%;
+    width: 100%;
+    object-position: center center;
+    object-fit: cover;
+}
 
+.imageBlock .greenLayer {
+    background-color: #95e1d3;
+    z-index: 1;
+   
+}
+
+.imageBlock:hover .overlay {
+    background-color: rgba(243, 129, 129, 0.75);
+    opacity: 1;
+    transform: translate(-10px, -10px);
+
+}
+
+.imageBlock:hover .image {
+    transform: translate(-10px, -10px);
+}
+
+.imageBlock .overlay i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.switchContainer {
+    background-color: #212221;
+    background: linear-gradient(to right, #1560bd, #e90);
+    border-radius: 50px;
+    height: 40px;
+    width: 75px;
+    position: relative;
+    
+}
+
+.switchContainer .switch input {
+    -webkit-appearance: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+input::before {
+    background-color: #fff;
+    width: 85%;
+    height: 70%;
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    transform: translate(2px, -60%);
+
+}
+
+input::after {
+    background: linear-gradient(to right, orange, #8e2de2);
+    content: "";
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(2px, -60%);
+    transition: 1s;
+}
+
+input:checked::after {
+    opacity: 1;
+    transform: translate(160%, -60%);
+}
