@@ -211,3 +211,52 @@ body {
     font-size: 24px;
     margin-bottom: 5px;
 }
+
+.switchContainer {
+background-color: #212221;
+background: linear-gradient(to right,#1560bd, #e90);
+border-radius:  50px; ;
+height: 40px;
+width: 75px;
+position: relative;
+
+}
+
+.switchContainer .switch input {
+-webkit-appearance: none;
+height: 100%;
+width: 100%;
+position: absolute;
+cursor:pointer;
+
+}
+
+input::before {
+    background-color:#fff ;
+    width: 85%;
+    height: 70%;
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    transform: translate(2px,-60%);
+
+}
+
+input::after {
+    background: linear-gradient(to right, orange, #8e2de2);
+    content: "";
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+   transform: translate(2px, -60%);
+   transition: 1s;
+}
+
+input:checked::after {
+    opacity: 1;
+    transform: translate(160%, -60%);
+}
+
