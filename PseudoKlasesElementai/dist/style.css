@@ -1,0 +1,262 @@
+/* selector: pseudoKlase {
+    savybe: reiksme} */
+
+/* Nuorodos pseudo klases */
+
+/* nepaspausta nuoroda  */
+
+a:link {
+    color: black;
+    font-size: 20px;
+}
+
+/* paspausta nuoroda */
+
+a:visited {
+    color: red;
+    font-size: 30px;
+}
+
+/* uzvedus peles zymekli  */ 
+
+a:hover {
+    color: brown;
+}
+
+/* pasirinta nuoroda */
+
+a:active {
+    color: blue;
+}
+
+/* ---------------------hover ---------------------------- */
+
+.box1 {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    display: inline-block;
+}
+
+.box2 {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+}
+
+.box1:hover {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    transition: 1s;
+}
+
+.miniBox {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    
+
+}
+
+.miniBox:hover {
+    top: 0;
+    right: 0;
+    transition: 3s;
+}
+
+/* --------first child----- */
+
+
+ul li:first-child {
+    color: green;
+}
+
+p span:first-child {
+    color: red;
+}
+
+ul li:nth-child(3) {
+    color: hotpink;
+}
+
+p span:last-child {
+    color: blue;
+}
+
+/* Pseudo elementai----- */
+
+/* selector::pseudo elementas{
+    savybe: reiksme;} */
+
+.pseudoList {
+    list-style: none;
+}
+
+.pseudoList li::before {
+    content: "";
+    margin-right: 15px;
+    width: 5px;
+    height: 5px;
+    background-color: green;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.pseudoList li::after {
+    content: ":)";
+    margin-left: 15px;
+}
+
+
+/* ==========Cards============= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+
+.column {
+    height: 100%;
+    width: 32%;
+    padding: 25px 0;
+
+}
+
+.imageBlock {
+    position: relative;
+}
+
+.imageBlock,
+.imageBlock .overlay,
+.imageBlock .image,
+.imageBlock .greenLayer {
+    height: 100%;
+    width: 100%;
+}
+
+.imageBlock .overlay,
+.imageBlock .image,
+.imageBlock .greenLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay { 
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     z-index: 3;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+   
+}
+
+.image{
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.imageBlock .image img{
+    height: 100%;
+    width: 100%;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.imageBlock .greenLayer{
+    background-color:#95e1d3;
+    z-index: 1;
+}
+
+.imageBlock:hover .overlay{
+    background-color: rgba(243, 129, 129, 0.75);
+    opacity: 1;
+    transform: translate(-10px, -10px);
+
+}
+
+.imageBlock:hover .image{
+    transform: translate(-10px, -10px);
+
+}
+
+.imageBlock .overlay i{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.switchContainer {
+background-color: #212221;
+background: linear-gradient(to right,#1560bd, #e90);
+border-radius:  50px; ;
+height: 40px;
+width: 75px;
+position: relative;
+
+}
+
+.switchContainer .switch input {
+-webkit-appearance: none;
+height: 100%;
+width: 100%;
+position: absolute;
+cursor:pointer;
+
+}
+
+input::before {
+    background-color:#fff ;
+    width: 85%;
+    height: 70%;
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    transform: translate(2px,-60%);
+
+}
+
+input::after {
+    background: linear-gradient(to right, orange, #8e2de2);
+    content: "";
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+   transform: translate(2px, -60%);
+   transition: 1s;
+}
+
+input:checked::after {
+    opacity: 1;
+    transform: translate(160%, -60%);
+}
+
